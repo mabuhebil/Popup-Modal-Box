@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000000bb;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#check:checked~.background {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.alart_box {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnclick {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #6b6be2;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 5;
+    transition: all 0.2s ease;
+}
+
+#check:checked~.btnclick {
+    pointer-events: none;
+    opacity: 0;
+}
+
+
+.btnclick:hover {
+    background-color: #8585e9;
+}
+
+
+.alart_box .box {
+    background-color: #fff;
+    width: 280px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+#check:checked~.alart_box .box {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+
+.alart_box .box .icon_box {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alart_box .box .icon_box i {
+    font-size: 35px;
+    color: red;
+}
+
+.alart_box .box span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.alart_box .box p {
+    font-size: 15px;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+
+.alart_box .box .btns {
+    margin-top: 5px;
+}
+
+.alart_box .box .btns label {
+
+    padding: 10px 15px;
+    margin-right: 5px;
+    border-radius: 5px;
+    color: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.alart_box .box .btns label:first-child {
+    background-color: #6b6be2;
+
+}
+
+.alart_box .box .btns label:first-child:hover {
+    background-color: #8585e9;
+}
+
+.alart_box .box .btns label:last-child {
+    background-color: red;
+}
+
+.alart_box .box .btns label:last-child:hover {
+    background-color: rgb(221, 100, 100);
+}
+
+input {
+    display: none;
+}
